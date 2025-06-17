@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fill out a new log form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+
+          fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          serif: ['Cormorant Garamond', 'serif'],
+          },
+          colors: {
+            lilac: { DEFAULT: "#d9c7dd", hsl: "287, 30%, 85%" },
+            purple: { DEFAULT: "#5a4060", hsl: "289, 20%, 30%" },
+            eggshell: { DEFAULT: "#d4ab86", hsl: "28, 45%, 68%" },
+            sage: { DEFAULT: "#608268", hsl: "128, 15%, 45%" },
+            offwhite: { DEFAULT: "#fdfced", hsl: "55, 85%, 96%" }
+          },
+          boxShadow: {
+            'soft': '0 14px 24px 0 rgba(90, 64, 96, 0.15)',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-[url('/img/ssspot.svg')] bg-cover bg-center h-screen ">
+  <header class="bg-offwhite border-b-2 p-4 grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-4 items-center">
+    <div class="md:col-span-8 flex gap-4 items-center justify-center md:justify-start">
+      <img src="/img/logoSquared.png" class="border-2 border-lilac rounded-full w-16 h-16">
+      <span class="text-purple font-serif font-extrabold text-3xl md:text-4xl tracking-wider">Spot A Bird App</span>
+    </div>
+    <div class="md:col-span-4 flex gap-4 text-purple items-center justify-center md:justify-end">
+      <a href="./user-profile.html" class="decoration-none font-semibold tracking-wider underline hover:text-purple/80 transition">
+        Eva Peristeri
+      </a>
+      <div class="group relative">
+        <a class="p-2 bg-lilac rounded hover:bg-lilac/80 transition" href="./login.html">
+          <i class="fa-solid fa-person-hiking"></i>
+        </a>
+        <span class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-purple text-offwhite text-xs px-2 py-1 rounded whitespace-nowrap -bottom-8 left-1/2 transform -translate-x-1/2 pointer-events-none">
+          Logout
+        </span>
+      </div>
+    </div>
+  </header>
+  
+  <main class=" mt-4 mx-10 p-4 md:p-8 rounded-xl shadow-soft border-2 border-lilac/60 bg-offwhite grid grid-cols-1 lg:grid-cols-12 gap-4 h-3/4">
+    
+  </main>
+
+  <footer class="bg-offwhite h-1/8">
+    <p class="p-8 text-sage bg-eggshell/20 font-medium font-sans"><em>© All rights reserved. 2025</em></p>
+  </footer>
+</body>
+</html>
