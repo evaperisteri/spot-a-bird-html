@@ -32,6 +32,7 @@
     }
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
 </head>
 <body class="bg-[url('/img/ssspot.svg')] bg-cover bg-center h-screen ">
   <header class="bg-offwhite border-b-2 p-4 grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-4 items-center">
@@ -54,15 +55,112 @@
     </div>
   </header>
   
-  <main class=" mt-4 mx-10 p-4 md:p-8 rounded-xl shadow-soft border-2 border-lilac/60 bg-offwhite grid grid-cols-1 lg:grid-cols-12 gap-4 h-3/4">
-     <div class="md:col-span-2 flex flex-col sm:flex-row md:flex-col gap-4 rounded-xl shadow-soft border-2 border-purple/80 p-4 ">
-      <button class="bg-sage hover:bg-opacity-40 hover:text-sage hover:shadow-md text-offwhite text-lg md:text-xl font-sans font-semibold tracking-wide rounded-lg text-center p-4 w-full transition duration-200 shadow-md"><a href="/html/dashboard.html">View all logs</a></button>
-      <button class="bg-sage hover:bg-opacity-40 hover:text-sage hover:shadow-md text-offwhite text-lg md:text-xl font-sans font-semibold tracking-wide rounded-lg text-center p-4 w-full transition duration-200 shadow-md"><a href="/html/birdwatching-log-form.html">New Log</a></button>
+  <main class=" mt-4 mx-10 p-4 md:p-8 rounded-xl shadow-soft border-2 border-lilac/60 bg-offwhite grid grid-cols-1 md:grid-cols-12 gap-4 h-3/4 overflow-auto">
+     <div class="md:col-span-3 flex flex-col sm:flex-row md:flex-col gap-4 rounded-xl shadow-soft border-2 border-purple/80 m-4 p-4 ">
+      <button class="bg-sage hover:bg-opacity-40 hover:text-sage hover:shadow-md text-offwhite text-lg md:text-xl font-sans font-semibold tracking-wide rounded-lg text-center w-full p-4 transition duration-200 shadow-md"><a href="/html/dashboard.html">View all logs</a></button>
+      <button class="bg-sage hover:bg-opacity-40 hover:text-sage hover:shadow-md text-offwhite text-lg md:text-xl font-sans font-semibold tracking-wide rounded-lg text-center w-full p-4 transition duration-200 shadow-md"><a href="/html/birdwatching-log-form.html">New Log</a></button>
+      <button class="bg-sage hover:bg-opacity-40 hover:text-sage hover:shadow-md text-offwhite text-lg md:text-xl font-sans font-semibold tracking-wide rounded-lg text-center w-full p-4 transition duration-200 shadow-md"><a href="/html/edit-profile.html">Edit Profile</a></button>
     </div>
-    <div class="md:col-span-10">
-      <div class="mt-8">
-      <span class="font-serif text-purple mb-4 text-2xl border border-purple m-4 p-2">Eva Peristeri</span>
-  
+    <div class="md:col-span-9">
+      <div class="mt-4 px-20">
+        <span class="block text-center font-semibold font-logo tracking-wider rounded-xl shadow-soft text-purple text-2xl border border-purple p-4 m-4">Profile Details</span>  
+      </div>
+      <div class="mt-4 lg:px-20">
+        <div class="text-center font-logo rounded-xl shadow-soft text-purple text-2xl border border-purple md:p-10 m-4">
+          <div class="bg-offwhite overflow-auto shadow rounded-lg border border-lilac/80 px-10">
+              <div class="px-4 py-5 sm:px-6">
+                  <h3 class="text-4xl text-sage font-bold tracking-wider">
+                    Eva Peristeri
+                  </h3>
+              </div>
+              <div class="border-t border-lilac/80 px-4 py-5 sm:p-0">
+                  <dl class="sm:divide-y sm:divide-eggshell/30">
+                      <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                          <dt class="font-bold text-sage">
+                              Full name
+                          </dt>
+                          <dd class="font-sans mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2">
+                              Eva Peristeri
+                          </dd>
+                      </div>
+                      <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                          <dt class="font-bold text-sage">
+                              Email address 
+                          </dt>
+                          <dd class="font-sans mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2">
+                              johndoe@example.com
+                          </dd>
+                      </div>
+                      <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                          <dt class="font-bold text-sage">
+                              Phone number
+                          </dt>
+                          <dd class="font-sans mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2">
+                              (123) 456-7890
+                          </dd>
+                      </div>
+                      <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                          <dt class="font-bold text-sage">
+                              Address
+                          </dt>
+                          <dd class="font-sans mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2">
+                              123 Main St, Anytown, USA 12345
+                          </dd>
+                      </div>
+                  </dl>
+              </div>
+          </div>
+        </div>  
+      </div>
+    <div class="mt-4 px-20">
+        <span class="block text-center font-semibold font-logo tracking-wider rounded-xl shadow-soft text-purple text-2xl border border-purple p-4 m-4">Statistics</span>  
+      </div>
+      <div class="mt-4 lg:px-20">
+        <div class="text-center font-logo rounded-xl shadow-soft text-purple text-2xl border border-purple md:p-10 m-4">
+          <div class="bg-offwhite overflow-auto shadow rounded-lg border border-lilac/80 px-10">
+              <div class="px-4 py-5 sm:px-6">
+                  <h3 class="text-4xl text-sage font-bold tracking-wider">
+                    Overview
+                  </h3>
+              </div>
+              <div class="border-t border-lilac/80 px-4 py-5 sm:p-0">
+                  <dl class="sm:divide-y sm:divide-eggshell/30">
+                      <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                          <dt class="font-bold text-sage">
+                              Number of Species
+                          </dt>
+                          <dd class="font-sans mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2">
+                              10
+                          </dd>
+                      </div>
+                      <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                          <dt class="font-bold text-sage">
+                            Different Locations 
+                          </dt>
+                          <dd class="font-sans mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2">
+                              4
+                          </dd>
+                      </div>
+                      <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                          <dt class="font-bold text-sage">
+                            Number of Birds Spotted
+                          </dt>
+                          <dd class="font-sans mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2">
+                              90
+                          </dd>
+                      </div>
+                      <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                          <dt class="font-bold text-sage">
+                            Types of Birds Spotted
+                          </dt>
+                          <dd class="font-sans mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2">
+                              set of species
+                          </dd>
+                      </div>
+                  </dl>
+              </div>
+          </div>
+        </div>  
       </div>
     </div>
     
