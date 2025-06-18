@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register a new user</title>
+  <title>Register Here!</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
@@ -32,6 +32,35 @@
     }
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Base styles that work in most browsers */
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      }
+    select option {
+      background: #fdfced; /* offwhite */
+      color: #5a4060; /* purple */
+      }
+    select option:checked {
+      background: #d9c7dd linear-gradient(0deg, #d9c7dd 0%, #d9c7dd 100%); /* lilac */
+      color: #5a4060; /* purple */
+      }
+       /* Hover states (works in Firefox and some WebKit browsers) */
+    select option:hover {
+        background-color: #d9c7dd; /* lilac */
+        color: #5a4060;
+        cursor: pointer;
+      }
+      
+      /* Focus state for the select itself */
+    select:focus {
+        outline: none;
+        border-color: #5a4060; /* purple */
+        box-shadow: 0 0 0 1px #5a4060;
+      }
+  </style>
 </head>
 <body class="bg-[url('/img/ssspot.svg')] bg-cover bg-center h-screen ">
   <header class="bg-offwhite border-b-2 p-4 grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-4 items-center">
@@ -55,8 +84,90 @@
     </div>
   </header>
   
-  <main class=" mt-4 mx-10 p-4 md:p-8 rounded-xl shadow-soft border-2 border-lilac/60 bg-offwhite grid grid-cols-1 lg:grid-cols-12 gap-4 h-3/4">
-    
+  <main class=" mt-4 mx-10 p-4 md:p-8 rounded-xl shadow-soft border-2 border-lilac/60 bg-offwhite h-3/4 overflow-auto">
+    <div class="lg:mx-40">
+      <div class="mt-4 px-20">
+        <span class="block text-center font-semibold font-logo tracking-wider rounded-xl shadow-soft text-purple text-lg md:text-2xl border border-purple p-4 m-4">Registration Form</span>  
+      </div>
+      <div class="mt-4 lg:px-20">
+        <div class="text-center font-logo rounded-xl shadow-soft text-purple text-2xl border border-purple p-6 md:p-8 m-4">
+          <form class="space-y-4 px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              <!-- First Column -->
+              <div class="space-y-4">
+                <!-- User Name -->
+                <div>
+                  <label for="username" class="block text-left text-sage font-medium mb-1 text-sm md:text-base">Userame</label>
+                  <input type="text" id="username" name="username" class="w-full px-3 py-2 text-sm rounded-lg border-2 border-lilac text-purple bg-offwhite font-sans  hover:border-sage/50 focus:ring-2 focus:ring-purple focus:outline-none" placeholder="Enter your username">
+                </div>
+                <!-- Password -->
+                <div>
+                  <label for="password" class="block text-left text-sage font-medium mb-1 text-sm md:text-base">Password</label>
+                  <input type="password" id="password" name="password" class="w-full px-3 py-2 text-sm rounded-lg border-2 border-lilac  hover:border-sage/50 focus:ring-2 focus:ring-purple focus:outline-none text-purple bg-offwhite font-sans" placeholder="Enter your password">
+                </div>
+                <!-- First Name -->
+                <div>
+                  <label for="firstname" class="block text-left text-sage font-medium mb-1 text-sm md:text-base">First Name</label>
+                  <input type="text" id="firstname" name="firstname" class="w-full px-3 py-2 text-sm rounded-lg border-2 border-lilac  hover:border-sage/50 focus:ring-2 focus:ring-purple focus:outline-none text-purple bg-offwhite font-sans" placeholder="Enter first name">
+                </div>
+
+                <!-- Last Name -->
+                <div>
+                  <label for="lastname" class="block text-left text-sage font-medium mb-1 text-sm md:text-base">Last Name</label>
+                  <input type="text" id="lastname" name="lastname" class="w-full px-3 py-2 text-sm rounded-lg border-2 border-lilac  hover:border-sage/50 focus:ring-2 focus:ring-purple focus:outline-none text-purple bg-offwhite font-sans" placeholder="Enter last name">
+                </div>
+
+                
+              </div>
+
+              <!-- Second Column -->
+              <div class="space-y-4">
+                <!-- Email -->
+                <div>
+                  <label for="email" class="block text-left text-sage font-medium mb-1 text-sm md:text-base">Email</label>
+                  <input type="email" id="email" name="email" class="w-full px-3 py-2 text-sm rounded-lg border-2 border-lilac  hover:border-sage/50 focus:ring-2 focus:ring-purple focus:outline-none text-purple bg-offwhite font-sans" placeholder="Enter your email">
+                </div>
+                <!-- Date of Birth -->
+                <div>
+                  <label for="dob" class="block text-left text-sage font-medium mb-1 text-sm md:text-base">Date of Birth</label>
+                  <input type="date" id="dob" name="dob" class="w-full px-3 py-2 text-sm rounded-lg border-2 border-lilac  hover:border-sage/50 focus:ring-2 focus:ring-purple focus:outline-none text-gray-400  bg-offwhite font-sans">
+                </div>
+
+                <!-- Gender Dropdown -->
+                <div>
+                  <label for="gender" class="block text-left text-sage font-medium mb-1 text-sm md:text-base">Gender</label>
+                  <select id="gender" name="gender" class="w-full px-3 py-2 text-sm rounded-lg border-2 border-lilac hover:border-sage/50 focus:ring-2 focus:ring-purple focus:outline-none text-gray-400  bg-offwhite font-sans">
+                    <option value="" disabled selected>Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="non-binary">Non-binary</option>
+                    <option value="genderfluid">Genderfluid</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <!-- Role Dropdown -->
+                <div>
+                  <label for="role" class="block text-left text-sage font-medium mb-1 text-sm md:text-base">Role</label>
+                  <select id="role" name="role" class="w-full px-3 py-2 text-sm rounded-lg border-2 border-lilac  hover:border-sage/50 focus:ring-2 focus:ring-purple focus:outline-none text-gray-400 bg-offwhite font-sans">
+                    <option value="" disabled selected>Select role</option>
+                    <option value="admin">Admin</option>
+                    <option value="spotter">Spotter</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit Button (full width) -->
+            <div class="pt-4">
+              <button type="submit" class="w-full bg-purple/80 hover:bg-purple/60 text-offwhite font-sans font-bold  tracking-wide py-3 px-4 rounded-lg shadow-md transition duration-200 text-lg">
+                        <a href="./login.html">Save Profile</a>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="bg-offwhite h-1/8">

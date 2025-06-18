@@ -32,6 +32,35 @@
     }
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Base styles that work in most browsers */
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      }
+    select option {
+      background: #fdfced; /* offwhite */
+      color: #5a4060; /* purple */
+      }
+    select option:checked {
+      background: #d9c7dd linear-gradient(0deg, #d9c7dd 0%, #d9c7dd 100%); /* lilac */
+      color: #5a4060; /* purple */
+      }
+       /* Hover states (works in Firefox and some WebKit browsers) */
+    select option:hover {
+        background-color: #d9c7dd; /* lilac */
+        color: #5a4060;
+        cursor: pointer;
+      }
+      
+      /* Focus state for the select itself */
+    select:focus {
+        outline: none;
+        border-color: #5a4060; /* purple */
+        box-shadow: 0 0 0 1px #5a4060;
+      }
+  </style>
 </head>
 <body class="bg-[url('/img/ssspot.svg')] bg-cover bg-center h-screen ">
   <header class="bg-offwhite border-b-2 p-4 grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-4 items-center">
@@ -83,7 +112,7 @@
             <!-- Quantity Input -->
             <div>
               <label for="quantity" class="block text-left text-sage font-semibold mb-2 text-lg">Quantity</label>
-              <input type="number" id="quantity" name="quantity" min="1" class="w-full px-4 py-2 rounded-lg border-2 border-lilac focus:border-purple focus:ring-purple text-purple bg-offwhite font-sans" placeholder="Number of birds spotted">
+              <input type="number" id="quantity" name="quantity" min="1" class="w-full px-4 py-2 rounded-lg border-2 border-lilac focus:border-purple focus:ring-purple  text-purple bg-offwhite font-sans placeholder-purple" placeholder="Number of birds spotted">
             </div>
 
             <!-- Region Dropdown -->
