@@ -35,18 +35,19 @@
 </head>
 <body class="bg-[url('/img/ssspot.svg')] bg-cover bg-center h-screen ">
   <header class="bg-offwhite border-b-2 p-4 grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-4 items-center">
-    <div class="md:col-span-8 flex gap-4 items-center justify-center md:justify-start">
-      <img src="/img/logoSquared.png" class="border-2 border-lilac rounded-full w-16 h-16">
-      <span class="text-purple font-logo font-extrabold text-3xl md:text-4xl tracking-wider">Spot A Bird App</span>
-    </div>
-    <div class="md:col-span-4 flex gap-4 items-center text-purple justify-center md:justify-end">
+    <button type="button" class="md:col-span-8 flex justify-center md:justify-start"> 
+      <a href="./dashboard.html" class=" flex items-center gap-4 text-purple font-logo font-extrabold text-3xl md:text-4xl tracking-wider"><img src="/img/logoSquared.png" class="border-2 border-lilac rounded-full w-16 h-16">Spot A Bird App</a>
+    </button>
+    <div class="md:col-span-4 flex gap-4 text-purple items-center justify-center md:justify-end">
       <a href="./user-profile.html" class="decoration-none font-semibold tracking-wider underline hover:text-purple/80 transition">
         Eva Peristeri
       </a>
       <div class="group relative">
-        <a class="p-2 bg-lilac rounded hover:bg-lilac/80 transition" href="./login.html">
+        <button type="button">
+          <a class="p-2 bg-lilac rounded hover:bg-lilac/80 transition" href="./login.html">
           <i class="fa-solid fa-person-hiking"></i>
         </a>
+        </button>
         <span class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-purple text-offwhite text-xs px-2 py-1 rounded whitespace-nowrap -bottom-8 left-1/2 transform -translate-x-1/2 pointer-events-none">
           Logout
         </span>
