@@ -6,12 +6,14 @@
   <title>Search results</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
         extend: {
 
           fontFamily: {
+          logo: ['"Architects Daughter"', 'cursive'],
           sans: ['Inter', 'sans-serif'],
           serif: ['Cormorant Garamond', 'serif'],
           },
@@ -35,7 +37,7 @@
   <header class="bg-offwhite border-b-2 p-4 grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-4 items-center">
     <div class="md:col-span-8 flex gap-4 items-center justify-center md:justify-start">
       <img src="/img/logoSquared.png" class="border-2 border-lilac rounded-full w-16 h-16">
-      <span class="text-purple font-serif font-extrabold text-3xl md:text-4xl tracking-wider">Spot A Bird App</span>
+      <span class="text-purple font-logo font-extrabold text-3xl md:text-4xl tracking-wider">Spot A Bird App</span>
     </div>
     <div class="md:col-span-4 flex gap-4 items-center text-purple justify-center md:justify-end">
       <a href="./user-profile.html" class="decoration-none font-semibold tracking-wider underline hover:text-purple/80 transition">
