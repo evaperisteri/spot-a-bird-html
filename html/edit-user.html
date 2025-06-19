@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit your profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+
+          fontFamily: {
+          logo: ['"Architects Daughter"', 'cursive'],
+          sans: ['Inter', 'sans-serif'],
+          serif: ['Cormorant Garamond', 'serif'],
+          },
+          colors: {
+            lilac: { DEFAULT: "#d9c7dd", hsl: "287, 30%, 85%" },
+            purple: { DEFAULT: "#5a4060", hsl: "289, 20%, 30%" },
+            eggshell: { DEFAULT: "#d4ab86", hsl: "28, 45%, 68%" },
+            sage: { DEFAULT: "#608268", hsl: "128, 15%, 45%" },
+            offwhite: { DEFAULT: "#fdfced", hsl: "55, 85%, 96%" }
+          },
+          boxShadow: {
+            'soft': '0 14px 24px 0 rgba(90, 64, 96, 0.15)',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-[url('/img/ssspot.svg')] bg-cover bg-center h-screen ">
+  <header class="bg-offwhite border-b-2 p-4 grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-4 items-center">
+    <button type="button" class="md:col-span-8 flex justify-center md:justify-start"> 
+      <a href="./dashboard.html" class=" flex items-center gap-4 text-purple font-logo font-extrabold text-3xl md:text-4xl tracking-wider"><img src="/img/logoSquared.png" class="border-2 border-lilac rounded-full w-16 h-16">Spot A Bird App</a>
+    </button>
+    <div class="md:col-span-4 flex gap-4 text-purple items-center justify-center md:justify-end">
+      <a href="./user-profile.html" class="decoration-none font-semibold tracking-wider underline hover:text-purple/80 transition">
+        Eva Peristeri
+      </a>
+      <div class="group relative">
+        <button type="button">
+          <a class="p-2 bg-lilac rounded hover:bg-lilac/80 transition" href="./login.html">
+          <i class="fa-solid fa-person-hiking"></i>
+        </a>
+        </button>
+        <span class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-purple text-offwhite text-xs px-2 py-1 rounded whitespace-nowrap -bottom-8 left-1/2 transform -translate-x-1/2 pointer-events-none">
+          Logout
+        </span>
+      </div>
+    </div>
+  </header>
+  <main class=" mt-4 mx-10 p-4 md:p-8 rounded-xl shadow-soft border-2 border-lilac/60 bg-offwhite grid grid-cols-1  md:grid-cols-12 gap-4 h-3/4 overflow-auto">
+    <div class="md:col-span-3 flex flex-col sm:flex-row md:flex-col gap-4 rounded-xl shadow-soft border-2 border-purple/80 m-4 p-4 ">
+      <a href="/html/dashboard.html" class=" block bg-sage hover:bg-opacity-40 hover:text-sage hover:shadow-md text-offwhite text-lg md:text-xl font-sans font-semibold tracking-wide rounded-lg text-center w-full p-4 transition duration-200 shadow-md">Home</a>
+      <a href="/html/birdwatching-log-form.html" class=" block bg-sage hover:bg-opacity-40 hover:text-sage hover:shadow-md text-offwhite text-lg md:text-xl font-sans font-semibold tracking-wide rounded-lg text-center w-full p-4 transition duration-200 shadow-md">New Log</a>
+      <a href="/html/edit-user.html" class="bg-sage hover:bg-opacity-40 hover:text-sage hover:shadow-md text-offwhite text-lg md:text-xl font-sans font-semibold tracking-wide rounded-lg text-center w-full p-4 transition duration-200 shadow-md">Edit Profile</a>
+    </div>
+    <div class="md:col-span-9">
+      <div class="md:px-20">
+        <span class="block text-center font-semibold font-logo tracking-wider rounded-xl shadow-soft text-purple text-xl md:text-2xl border border-purple p-4 m-4">Profile Details</span>  
+      </div>
+      <div class="mt-4 lg:px-20">
+        <div class="text-center font-logo rounded-xl shadow-soft text-purple text-2xl border border-purple p-6 md:p-8 m-4">
+          <form class="space-y-4 px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              <!-- First Column -->
+              <div class="space-y-4">
+                <!-- User Name -->
+                <div>
+                  <label for="username" class="block text-left text-sage font-medium mb-1 text-sm md:text-base">Userame</label>
+                  <input type="text" id="username" name="username" value="EvaP" class="w-full px-3 py-2 text-sm rounded-lg border-2 border-lilac text-purple bg-offwhite font-sans  hover:border-sage/50 focus:ring-2 focus:ring-purple focus:outline-none" >
+                </div>
+                <!-- Password -->
+                <div>
+                  <label for="password" class="block text-left text-sage font-medium mb-1 text-sm md:text-base">Password</label>
+                  <input type="password" id="password" name="password" value="12345" class="w-full px-3 py-2 text-sm rounded-lg border-2 border-lilac  hover:border-sage/50 focus:ring-2 focus:ring-purple focus:outline-none text-purple bg-offwhite font-sans" placeholder="Enter your password">
+                </div>
+                <!-- First Name -->
+                <div>
+                  <label for="firstname" class="block text-left text-sage font-medium mb-1 text-sm md:text-base">First Name</label>
+                  <input type="text" id="firstname" name="firstname" value="Eva" class="w-full px-3 py-2 text-sm rounded-lg border-2 border-lilac  hover:border-sage/50 focus:ring-2 focus:ring-purple focus:outline-none text-purple bg-offwhite font-sans" placeholder="Enter first name">
+                </div>
+
+                <!-- Last Name -->
+                <div>
+                  <label for="lastname" class="block text-left text-sage font-medium mb-1 text-sm md:text-base">Last Name</label>
+                  <input type="text" id="lastname" name="lastname" value="Peristeri" class="w-full px-3 py-2 text-sm rounded-lg border-2 border-lilac  hover:border-sage/50 focus:ring-2 focus:ring-purple focus:outline-none text-purple bg-offwhite font-sans" placeholder="Enter last name">
+                </div>
+              </div>
+
+              <!-- Second Column -->
+              <div class="space-y-4">
+                <!-- Email -->
+                <div>
+                  <label for="email" class="block text-left text-sage font-medium mb-1 text-sm md:text-base">Email</label>
+                  <input type="email" id="email" name="email" value="eva@aueb.gr" class="w-full px-3 py-2 text-sm rounded-lg border-2 border-lilac  hover:border-sage/50 focus:ring-2 focus:ring-purple focus:outline-none text-purple bg-offwhite font-sans" placeholder="Enter your email">
+                </div>
+                <!-- Date of Birth -->
+                <div>
+                  <label for="dob" class="block text-left text-sage font-medium mb-1 text-sm md:text-base">Date of Birth</label>
+                  <input type="date" id="dob" name="dob" value="1988-10-04" class="w-full px-3 py-2 text-sm rounded-lg border-2 border-lilac  hover:border-sage/50 focus:ring-2 focus:ring-purple focus:outline-none text-gray-400  bg-offwhite font-sans">
+                </div>
+
+                <!-- Gender Dropdown -->
+                <div>
+                  <label for="gender" class="block text-left text-sage font-medium mb-1 text-sm md:text-base">Gender</label>
+                  <select id="gender" name="gender" class="w-full px-3 py-2 text-sm rounded-lg border-2 border-lilac hover:border-sage/50 focus:ring-2 focus:ring-purple focus:outline-none text-gray-400  bg-offwhite font-sans">
+                    <option value="" disabled >Select gender</option>
+                    <option value="female" selected>Female</option>
+                    <option value="male">Male</option>
+                    <option value="non-binary">Non-binary</option>
+                    <option value="genderfluid">Genderfluid</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <!-- Role Dropdown -->
+                <div>
+                  <label for="role" class="block text-left text-sage font-medium mb-1 text-sm md:text-base">Role</label>
+                  <select id="role" name="role" class="w-full px-3 py-2 text-sm rounded-lg border-2 border-lilac  hover:border-sage/50 focus:ring-2 focus:ring-purple focus:outline-none text-gray-400 bg-offwhite font-sans">
+                    <option value="" disabled >Select role</option>
+                    <option value="admin" selected>Admin</option>
+                    <option value="spotter">Spotter</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit Button (full width) -->
+            <div class="pt-4">
+              <a href="./login.html" class="block w-full bg-purple/80 hover:bg-purple/60 text-offwhite font-sans font-bold  tracking-wide py-3 px-4 rounded-lg shadow-md transition duration-200 text-lg">
+                        Save Profile
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+              
+          </div>  
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-offwhite h-1/8">
+    <p class="p-8 text-sage bg-eggshell/20 font-medium font-sans"><em>© All rights reserved. 2025</em></p>
+  </footer>
+</body>
+</html>
