@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit a log</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+
+          fontFamily: {
+          logo: ['"Architects Daughter"', 'cursive'],
+          sans: ['Inter', 'sans-serif'],
+          serif: ['Cormorant Garamond', 'serif'],
+          },
+          colors: {
+            lilac: { DEFAULT: "#d9c7dd", hsl: "287, 30%, 85%" },
+            purple: { DEFAULT: "#5a4060", hsl: "289, 20%, 30%" },
+            eggshell: { DEFAULT: "#d4ab86", hsl: "28, 45%, 68%" },
+            sage: { DEFAULT: "#608268", hsl: "128, 15%, 45%" },
+            offwhite: { DEFAULT: "#fdfced", hsl: "55, 85%, 96%" }
+          },
+          boxShadow: {
+            'soft': '0 14px 24px 0 rgba(90, 64, 96, 0.15)',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Base styles that work in most browsers */
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      }
+    select option {
+      background: #fdfced; /* offwhite */
+      color: #5a4060; /* purple */
+      }
+    select option:checked {
+      background: #d9c7dd linear-gradient(0deg, #d9c7dd 0%, #d9c7dd 100%); /* lilac */
+      color: #5a4060; /* purple */
+      }
+       /* Hover states (works in Firefox and some WebKit browsers) */
+    select option:hover {
+        background-color: #d9c7dd; /* lilac */
+        color: #5a4060;
+        cursor: pointer;
+      }
+      
+      /* Focus state for the select itself */
+    select:focus {
+        outline: none;
+        border-color: #5a4060; /* purple */
+        box-shadow: 0 0 0 1px #5a4060;
+      }
+  </style>
+</head>
+<body class="bg-[url('/img/ssspot.svg')] bg-cover bg-center h-screen ">
+  <header class="bg-offwhite border-b-2 p-4 grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-4 items-center">
+    <button type="button" class="md:col-span-8 flex justify-center md:justify-start"> 
+      <a href="./dashboard.html" class=" flex items-center gap-4 text-purple font-logo font-extrabold text-3xl md:text-4xl tracking-wider"><img src="/img/logoSquared.png" class="border-2 border-lilac rounded-full w-16 h-16">Spot A Bird App</a>
+    </button>
+    <div class="md:col-span-4 flex gap-4 text-purple items-center justify-center md:justify-end">
+      <a href="./user-profile.html" class="decoration-none font-semibold tracking-wider underline hover:text-purple/80 transition">
+        Eva Peristeri
+      </a>
+      <div class="group relative">
+        <button type="button">
+          <a class="p-2 bg-lilac rounded hover:bg-lilac/80 transition" href="./login.html">
+          <i class="fa-solid fa-person-hiking"></i>
+        </a>
+        </button>
+        <span class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-purple text-offwhite text-xs px-2 py-1 rounded whitespace-nowrap -bottom-8 left-1/2 transform -translate-x-1/2 pointer-events-none">
+          Logout
+        </span>
+      </div>
+    </div>
+  </header>
+  
+  <main class=" mt-4 mx-10 p-4 md:p-8 rounded-xl shadow-soft border-2 border-lilac/60 bg-offwhite grid grid-cols-1 md:grid-cols-12 gap-4 h-3/4 overflow-auto">
+    <div class="md:col-span-3 flex flex-col sm:flex-row md:flex-col gap-4 rounded-xl shadow-soft border-2 border-purple/80 m-4 p-4 ">
+      <a href="/html/dashboard.html" class="block bg-sage hover:bg-opacity-40 hover:text-sage hover:shadow-md text-offwhite text-lg md:text-xl font-sans font-semibold tracking-wide rounded-lg text-center w-full p-4 transition duration-200 shadow-md">Home</a>
+      <a href="/html/user-profile.html" class="block bg-sage hover:bg-opacity-40 hover:text-sage hover:shadow-md text-offwhite text-lg md:text-xl font-sans font-semibold tracking-wide rounded-lg text-center w-full p-4 transition duration-200 shadow-md">My Profile</a>
+      <a href="/html/edit-user.html" class="bg-sage hover:bg-opacity-40 hover:text-sage hover:shadow-md text-offwhite text-lg md:text-xl font-sans font-semibold tracking-wide rounded-lg text-center w-full p-4 transition duration-200 shadow-md">Edit Profile</a>
+      <a href="/html/birdwatching-log-form.html" class=" block bg-sage hover:bg-opacity-40 hover:text-sage hover:shadow-md text-offwhite text-lg md:text-xl font-sans font-semibold tracking-wide rounded-lg text-center w-full p-4 transition duration-200 shadow-md">New Log</a>
+    </div>
+    <div class="md:col-span-9">
+      <div class="mt-4 px-20">
+        <span class="block text-center font-semibold font-logo tracking-wider rounded-xl shadow-soft text-purple text-2xl border border-purple p-4 m-4"> Log with id: 1</span>  
+      </div>
+      <div class="mt-2 lg:px-20">
+        <div class="text-center font-logo rounded-xl shadow-soft text-purple text-lg border border-purple md:p-10 m-4">
+          <form class="space-y-2 px-2 md:px-4">
+            <!-- Species Dropdown -->
+            <div>
+              <label for="species" class="block text-left text-sage font-semibold mb-2 text-lg">Species</label>
+              <select id="species" name="species" class="w-full px-4 py-2 rounded-lg border-2 border-lilac focus:border-purple focus:ring-purple text-purple bg-offwhite font-sans">
+                <option value="" disabled>Select a bird species</option>
+                <option value="robin">European Robin</option>
+                <option value="sparrow" selected>House Sparrow</option>
+                <option value="blackbird">Common Blackbird</option>
+                <option value="blue-tit">Blue Tit</option>
+                <option value="woodpecker">Great Spotted Woodpecker</option>
+              </select>
+            </div>
+
+            <!-- Quantity Input -->
+            <div>
+              <label for="quantity" class="block text-left text-sage font-semibold mb-2 text-lg">Quantity</label>
+              <input type="number" id="quantity" name="quantity" min="1" value="3" class="w-full px-4 py-2 rounded-lg border-2 border-lilac focus:border-purple focus:ring-purple  text-purple bg-offwhite font-sans placeholder-purple" placeholder="Number of birds spotted">
+            </div>
+
+            <!-- Region Dropdown -->
+            <div>
+              <label for="region" class="block text-left text-sage font-semibold mb-2 text-lg">Region</label>
+              <select id="region" name="region" class="w-full px-4 py-2 rounded-lg border-2 border-lilac focus:border-purple focus:ring-purple text-purple bg-offwhite font-sans">
+                <option value="" disabled >Select a region</option>
+                <option value="north">Northern Greece</option>
+                <option value="central" selected>Central Greece</option>
+                <option value="peloponnese">Peloponnese</option>
+                <option value="islands">Aegean Islands</option>
+                <option value="crete">Crete</option>
+              </select>
+            </div>
+
+            <!-- User Dropdown -->
+            <div>
+              <label for="user" class="block text-left text-sage font-semibold mb-2 text-lg">Observer</label>
+              <select id="user" name="user" class="w-full px-4 py-2 rounded-lg border-2 border-lilac focus:border-purple focus:ring-purple text-purple bg-offwhite font-sans">
+                <option value="eva" selected>Eva Peristeri</option>
+                <option value="john">John Doe</option>
+                <option value="maria">Maria Smith</option>
+              </select>
+            </div>
+
+            <!-- Save Button -->
+            <div class="pt-4">
+              <a href="/html/dashboard.html" class="block w-full bg-purple/80 hover:bg-purple/60 text-offwhite font-sans font-bold  tracking-wide py-3 px-4 rounded-lg shadow-md transition duration-200 text-lg">
+                Save
+              </a>
+            </div>
+            <div class="pt-4">
+              <a href="/html/dashboard.html" class="block w-full bg-purple/80 hover:bg-purple/60 text-offwhite font-sans font-bold  tracking-wide py-3 px-4 rounded-lg shadow-md transition duration-200 text-lg">
+                Delete this log
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-offwhite h-1/8">
+    <p class="p-8 text-sage bg-eggshell/20 font-medium font-sans"><em>© All rights reserved. 2025</em></p>
+  </footer>
+</body>
+</html>
